@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "SUMAN PRASAD",
+      "age": "30 years",
+      "dose1": "1st DOSE",
+      "dose2": "2nd DOSE",
+      "dose1date": "09 JUN 2021",
+      "dose2date": "09 JUN 2021",
+      "dose1code": "(B.NO.4121Z092)",
+      "dose2code": "(B.NO.4121Z092)",
+      "vaccineName": "COVISHIELD",
+      "status": "(Fully Vaccinated)"
+    }
+  ]
+}
