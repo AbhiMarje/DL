@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Templates>
+    <Templete id="1">
+
+        <Header background="#5fbe5d">
+            <Label color="#FFF" fontsize="35">title</Label>
+        </Header>
+
+        <Body>
+            <Table>
+
+                <Row>
+                    <Col>
+                        <Header>
+                            <Label color="#FFF" fontsize="18" style="BOLD">name</Label>
+                        </Header>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col>
+                        <Header>
+                            <Label color="#FFF" fontsize="14">age</Label>
+                        </Header>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col>
+                        <Header>
+                            <Label color="#FFF" fontsize="18" style="BOLD">dose1</Label>
+                        </Header>
+                        <Content>
+                            <Label color="#FFF" fontsize="13">dose1date</Label>
+                        </Content>
+                        <Footer>
+                            <Label color="#FFF" fontsize="13">dose1code</Label>
+                        </Footer>
+                    </Col>
+                    <Col>
+                        <Header>
+                            <Label color="#FFF" fontsize="18" style="BOLD">dose2</Label>
+                        </Header>
+                        <Content>
+                            <Label color="#FFF" fontsize="13">dose2date</Label>
+                        </Content>
+                        <Footer>
+                            <Label color="#FFF" fontsize="13">dose2code</Label>
+                        </Footer>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col>
+                        <Header>
+                            <Img></Img>
+                        </Header>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col>
+                        <Card>
+                            <Label background="#FFF"></Label>
+                            <Header>
+                                <Label color="#000000" fontsize="26" style="BOLD">vaccineName</Label>
+                            </Header>
+                            <Content>
+                                <Label color="#5fbe5d" fontsize="16">status</Label>
+                            </Content>
+                        </Card>
+                    </Col>
+                </Row>
+            </Table>
+
+            <Footer>
+                <Img></Img>
+            </Footer>
+        </Body>
+    </Templete>
+</Templates>
