@@ -3,11 +3,12 @@
     <Templete id="1">
 
         <Header background="#5fbe5d">
-            <Label color="#FFF" fontsize="35">title</Label>
+            <Label color="#FFF" fontsize="35" style="BOLD">title</Label>
         </Header>
 
         <Body>
             <Table>
+
 
                 <Row>
                     <Col>
@@ -17,6 +18,7 @@
                     </Col>
                 </Row>
 
+
                 <Row>
                     <Col>
                         <Header>
@@ -24,6 +26,7 @@
                         </Header>
                     </Col>
                 </Row>
+
 
                 <Row>
                     <Col>
@@ -37,6 +40,7 @@
                             <Label color="#FFF" fontsize="13">dose1code</Label>
                         </Footer>
                     </Col>
+
                     <Col>
                         <Header>
                             <Label color="#FFF" fontsize="18" style="BOLD">dose2</Label>
@@ -50,6 +54,7 @@
                     </Col>
                 </Row>
 
+
                 <Row>
                     <Col>
                         <Header>
@@ -57,6 +62,7 @@
                         </Header>
                     </Col>
                 </Row>
+
 
                 <Row>
                     <Col>
@@ -71,11 +77,15 @@
                         </Card>
                     </Col>
                 </Row>
+
             </Table>
+
 
             <Footer>
                 <Img></Img>
             </Footer>
+
+
         </Body>
     </Templete>
 </Templates>
