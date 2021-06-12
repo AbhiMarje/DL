@@ -18,6 +18,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -177,13 +179,19 @@ public class MainActivity extends AppCompatActivity {
 
                 for (int j=0;j<arrayList.size();j++){
 
-                    Boolean cardcheck = false;
+                    Boolean cardcheck = false, colcheck = false;
                     Log.e("data", "check: " +arrayList.get(j).getCard());
                     CardView cardView = new CardView(MainActivity.this);
+                    TableRow tableRow = new TableRow(MainActivity.this);
+                    TableRow tableRow1 = new TableRow(MainActivity.this);
+                    TextView textView = new TextView(MainActivity.this);
+                    TextView textView1 = new TextView(MainActivity.this);
+                    TextView textView2 = new TextView(MainActivity.this);
+                    TextView textView3 = new TextView(MainActivity.this);
+                    TableLayout.LayoutParams layoutParams3 = new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT);
 
                     if (!String.valueOf(arrayList.get(j).getRow()).equals(null)){
-                        TableRow tableRow = new TableRow(MainActivity.this);
-                        TextView textView = new TextView(MainActivity.this);
+
                         if (arrayList.get(j).getCard()){
                             cardView.setCardBackgroundColor(Color.WHITE);
                             cardView.setCardElevation(30);
@@ -191,20 +199,43 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         textView.setText(userData.getString(arrayList.get(j).getCol1text1()));
+                        if (arrayList.get(j).getCol1text1().equals("dose1")){
+                            colcheck = true;
+                            String data = userData.getString(arrayList.get(j+4).getCol1text1()) + "\n" +
+                                    userData.getString(arrayList.get(j+5).getCol1text1());
+                            String data1 = userData.getString(arrayList.get(j+1).getCol1text1()) + "\n" +
+                                    userData.getString(arrayList.get(j+2).getCol1text1());
+                            Log.e("data", "nxt: " + data);
+                            textView2.setText(data);
+                            textView2.setGravity(Gravity.CENTER);
+                            textView2.setTextColor(Color.parseColor(arrayList.get(j+1).getColor()));
+                            textView2.setTextSize(Integer.parseInt(arrayList.get(j+1).getFont()));
+                            textView3.setText(data1);
+                            textView3.setGravity(Gravity.CENTER);
+                            textView3.setTextColor(Color.parseColor(arrayList.get(j+1).getColor()));
+                            textView3.setTextSize(Integer.parseInt(arrayList.get(j+1).getFont()));
+                            textView1.setText(userData.getString(arrayList.get(j+3).getCol1text1()));
+                        }
 
                         if (!arrayList.get(j).getColor().equals(null)){
                             textView.setTextColor(Color.parseColor(arrayList.get(j).getColor()));
+                            textView1.setTextColor(Color.parseColor(arrayList.get(j).getColor()));
+
                         }
 
                         if (!arrayList.get(j).getFont().equals(null)){
                             textView.setTextSize(Integer.parseInt(arrayList.get(j).getFont()));
+                            textView1.setTextSize(Integer.parseInt(arrayList.get(j).getFont()));
+
                         }
 
-                        if (!arrayList.get(j).getStyle().equals(null)){
+                        if (arrayList.get(j).getStyle().equals("BOLD")){
                             textView.setTypeface(null, Typeface.BOLD);
+                            textView1.setTypeface(null, Typeface.BOLD);
                         }
 
                         textView.setGravity(Gravity.CENTER);
+                        textView1.setGravity(Gravity.CENTER);
                         tableRow.setGravity(Gravity.CENTER);
 
 
@@ -223,6 +254,19 @@ public class MainActivity extends AppCompatActivity {
                         if (cardcheck){
                             cardView.addView(textView);
                             tableLayout.addView(cardView);
+                        }else if (colcheck){
+                            layoutParams3.setMargins(0,60,0,0);
+                            tableRow.setLayoutParams(layoutParams3);
+                            tableRow.addView(textView);
+                            tableRow.addView(textView1);
+                            tableRow1.addView(textView2);
+                            tableRow1.addView(textView3);
+                            tableRow1.setGravity(Gravity.CENTER);
+                            tableLayout.setGravity(Gravity.CENTER);
+                            tableLayout.addView(tableRow);
+                            tableLayout.addView(tableRow1);
+                            j = j+5;
+                            continue;
                         }else{
                             tableRow.addView(textView);
                             tableLayout.addView(tableRow);
