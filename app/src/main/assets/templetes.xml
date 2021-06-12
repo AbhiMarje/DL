@@ -3,7 +3,7 @@
     <Templete id="1">
 
         <Header background="#5fbe5d">
-            <Label color="#FFF" fontsize="35" style="BOLD">title</Label>
+            <Label color="#FFFFFF" fontsize="35" style="BOLD">title</Label>
         </Header>
 
         <Body>
@@ -13,7 +13,7 @@
                 <Row>
                     <Col>
                         <Header>
-                            <Label color="#FFF" fontsize="18" style="BOLD">name</Label>
+                            <Label color="#FFFFFF" fontsize="18" style="BOLD">name</Label>
                         </Header>
                     </Col>
                 </Row>
@@ -22,7 +22,7 @@
                 <Row>
                     <Col>
                         <Header>
-                            <Label color="#FFF" fontsize="14">age</Label>
+                            <Label color="#FFFFFF" fontsize="14">age</Label>
                         </Header>
                     </Col>
                 </Row>
@@ -31,25 +31,25 @@
                 <Row>
                     <Col>
                         <Header>
-                            <Label color="#FFF" fontsize="18" style="BOLD">dose1</Label>
+                            <Label color="#FFFFFF" fontsize="18" style="BOLD">dose1</Label>
                         </Header>
                         <Content>
-                            <Label color="#FFF" fontsize="13">dose1date</Label>
+                            <Label color="#FFFFFF" fontsize="13">dose1date</Label>
                         </Content>
                         <Footer>
-                            <Label color="#FFF" fontsize="13">dose1code</Label>
+                            <Label color="#FFFFFF" fontsize="13">dose1code</Label>
                         </Footer>
                     </Col>
 
                     <Col>
                         <Header>
-                            <Label color="#FFF" fontsize="18" style="BOLD">dose2</Label>
+                            <Label color="#FFFFFF" fontsize="18" style="BOLD">dose2</Label>
                         </Header>
                         <Content>
-                            <Label color="#FFF" fontsize="13">dose2date</Label>
+                            <Label color="#FFFFFF" fontsize="13">dose2date</Label>
                         </Content>
                         <Footer>
-                            <Label color="#FFF" fontsize="13">dose2code</Label>
+                            <Label color="#FFFFFF" fontsize="13">dose2code</Label>
                         </Footer>
                     </Col>
                 </Row>
@@ -58,7 +58,7 @@
                 <Row>
                     <Col>
                         <Header>
-                            <Img></Img>
+                            <Img>@drawable/image1</Img>
                         </Header>
                     </Col>
                 </Row>
@@ -66,8 +66,7 @@
 
                 <Row>
                     <Col>
-                        <Card>
-                            <Label background="#FFF"></Label>
+                        <Card background="#FFFFFF">
                             <Header>
                                 <Label color="#000000" fontsize="26" style="BOLD">vaccineName</Label>
                             </Header>
@@ -82,7 +81,7 @@
 
 
             <Footer>
-                <Img></Img>
+                <Img>@drawable/image2</Img>
             </Footer>
 
 
