@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
@@ -279,7 +280,9 @@ public class MainActivity extends AppCompatActivity {
                 ImageView img = new ImageView(MainActivity.this);
                 Drawable re = getResources().getDrawable(imgResource);
                 TableRow.LayoutParams layoutParams3 = new TableRow.LayoutParams(210, 210);
-                img.setLayoutParams(layoutParams3);
+                TableLayout.LayoutParams params = new TableLayout.LayoutParams(220,220);
+                params.setMargins(0,80,0,0);
+                img.setLayoutParams(params);
                 img.setImageDrawable(re);
                 tableLayout.addView(img);
 
